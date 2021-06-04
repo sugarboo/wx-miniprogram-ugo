@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "search-bar": "../../components/SearchBar/SearchBar"
+  },
+  "navigationBarTitleText": "分类"
 }

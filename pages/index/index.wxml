@@ -29,7 +29,7 @@
     <navigator
       wx:for="{{categoryList}}"
       wx:key="name"
-      url="/pages/category/main"
+      url="/pages/category/index"
       open-type="switchTab"
     >
       <image src="{{item.image_src}}" mode="widthFix"></image>

@@ -1,7 +1,3 @@
-/* 首页页面样式 */
-page {
-  background-color: #f2f2f2;
-}
 /* 轮播图部分样式 */
 .swiper_section swiper {
   width: 750rpx;
@@ -27,6 +23,10 @@ page {
 /* 楼层部分样式 */
 .floor_section .floor_group .floor_title image {
   width: 100%;
+}
+.floor_section .floor_group .floor_product_list {
+  /* 清除浮动 */
+  overflow: hidden;
 }
 .floor_section .floor_group .floor_product_list navigator {
   float: left;

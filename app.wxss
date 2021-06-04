@@ -10,7 +10,13 @@ page, view, text, swiper, swiper-item, image, navigator {
 
 page {
   /* 定义主题颜色 */
-  --themeColor: #eb4450;
-  /* 定义统一字体大小 */
+  --themeColor: #feaa47;
+  /* 定义全局字体大小 */
   font-size: 28rpx;
+  /* 定义全局背景颜色 */
+  background-color: #f2f2f2;
+}
+
+image {
+  width: 100%;
 }
