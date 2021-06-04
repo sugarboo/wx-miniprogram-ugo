@@ -1,5 +1,4 @@
 <view class="index_container">
-  
   <!-- 搜索部分 -->
   <view class="search_section">
     <search-bar></search-bar>

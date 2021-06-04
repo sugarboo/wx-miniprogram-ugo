@@ -22,10 +22,10 @@
   },
   "tabBar": {
     "color": "#999999",
-    "selectedColor": "#ff2d4a",
-    "backgroundColor": "#fafafa",
+    "selectedColor": "#feaa47",
+    "backgroundColor": "#ffffff",
     "position": "bottom",
-    "borderStyle": "black",
+    "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/index/index",

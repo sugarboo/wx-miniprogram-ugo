@@ -22,19 +22,42 @@ Page({
    * 当页面开始加载时, 发送网络请求, 获取数据
    */
   onLoad: function (options) {
-    this.getCategory()
+    // 从本地缓存中获取分类数据
+    const categoriesFromStorage = wx.getStorageSync('categoriesFromStorage')
+    if (categoriesFromStorage) {
+      // 本地缓存中已存在分类数据
+      if (Date.now() - categoriesFromStorage.time > 1000 * 10) {
+        // 本地缓存已过期, 重新请求数据
+        this.getCategories()
+      }else {
+        // 本地缓存未过期, 直接使用缓存中的分类数据
+        this.categories = categoriesFromStorage
+        // 构造左侧菜单数据
+        let leftMenuList = this.categories.map(v => v.cat_name)
+        // 构造右侧内容数据
+        let rightContentList = this.categories[0].children
+        this.setData({
+          leftMenuList,
+          rightContentList
+        })
+      }
+    } else {
+      // 本地缓存中不存在分类数据, 调用自定义方法发起请求获取分类数据
+      this.getCategories()
+    }
   },
   
   /**
    * 发送网络请求, 获取分类数据
    */
-  async getCategory () {
+  async getCategories () {
     const res = await request({
       url: "/categories"
     })
     // 请求成功响应, 将响应的分类数据保存在data对应的变量中
     this.categories = res.data.message
-    console.log(this.categories)
+    // 把获取到的分类数据保存在本地缓存中
+    wx.setStorageSync("categoriesFromStorage", {time: Date.now(), data: this.categories})
     // 构造左侧菜单数据
     let leftMenuList = this.categories.map(v => v.cat_name)
     // 构造右侧内容数据
@@ -49,10 +72,11 @@ Page({
   handleMenuItemTap (e) {
     // 获取当前点击的菜单选项的索引
     const {index} = e.currentTarget.dataset
-    // 将获取到的索引保存至currentIndex中
     this.setData({
+      // 将获取到的索引保存至currentIndex中
       currentIndex: index,
-      rightContentList: this.categories[index].children,
+      // 将当前索引对应的右侧内容数据保存至rightContentList中
+      rightContentList: this.categories[index].children, 
       isScrollTop: 0 // 重新设置右侧内容的scroll-view标签的距离顶部的距离
     })
   }

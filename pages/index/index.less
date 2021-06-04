@@ -13,8 +13,7 @@
 .category_section {
   display: flex;
   background-color: #ffffff;
-  margin-top: 20rpx;
-  margin-bottom: 20rpx;
+  margin: 20rpx 0;
   navigator {
     flex: 1;
     padding: 20rpx;
@@ -27,11 +26,6 @@
 /* 楼层部分样式 */
 .floor_section {
   .floor_group {
-    .floor_title {
-      image {
-        width: 100%;
-      }
-    }
     .floor_product_list {
       /* 清除浮动 */
       overflow: hidden;
@@ -39,7 +33,6 @@
         float: left;
         width: 33.33%;
         image {
-          width: 100%;
           height: 100%;
         }
         &:nth-last-child(-n+4) {
@@ -49,11 +42,11 @@
             height = 33.33vw * 386 / 232
           */
           height: 33.33vw * (386 / 232 / 2);
-          border-left: 10rpx solid #ffffff;
+          border-left: 10rpx solid #f2f2f2;
         }
         &:nth-child(2), 
         &:nth-child(3) {
-          border-bottom: 10rpx solid #ffffff;
+          border-bottom: 10rpx solid #f2f2f2;
         }
       }
     }

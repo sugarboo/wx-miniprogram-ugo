@@ -2,18 +2,18 @@
  * 封装网络请求模块
  */
 
-// 同时发送的异步请求数量
+// 同时发送的异步请求数量计数器
 let ajaxCounts = 0
 
 /**
  * 使用Promise封装请求
  */
- export const request = (params) => {
+ export const request = params => {
   
   //  定义公共url
   const baseUrl = "https://api-hmugo-web.itheima.net/api/public/v1"
 
-  // 当request被调用时, 页面发送了异步请求
+  // 当request被调用时, 页面发送了异步请求, 异步请求计数器+1
   ajaxCounts++
 
   // 开启加载中
@@ -33,9 +33,10 @@ let ajaxCounts = 0
          reject(err)
        },
        complete: () => {
+        // 请求处理完成, 异步请求计数器-1
         ajaxCounts--
-        if (ajaxCounts == 0) {
-          // 关闭加载中
+        if (ajaxCounts === 0) {
+          // 异步请求计数器为0时, 所有异步请求均已完成, 关闭加载中
           wx.hideLoading()
         }
        }

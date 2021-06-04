@@ -1,2 +1,36 @@
-<!--pages/goods_list/index.wxml-->
-<text>pages/goods_list/index.wxml</text>
+<view class="goods_list_container">
+  <search-bar></search-bar>
+    <!-- tab部分 -->
+  <view class="tab_section">
+    <tab tab="{{tab}}" bindtabChange="handleTabChange"></tab>
+  </view>
+    <!-- /tab部分 -->
+  <!-- 商品列表部分 -->
+  <view class="goods_list_section">
+    <view class="good_item"
+      wx:for="{{goodsList}}"
+      wx:key="goods_id"
+    >
+      <!-- 左侧图片容器 -->
+      <view class="good_image">
+        <image 
+          src="{{item.goods_small_logo ? item.goods_small_logo : 'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}"
+          mode="widthFix"
+        >
+        </image>
+      </view>
+      <!-- /左侧图片容器 -->
+      <!-- 右侧内容容器 -->
+      <view class="good_content">
+        <view class="good_name">
+          {{item.goods_name}}
+        </view>
+        <view class="good_price">
+          ¥{{item.goods_price}}
+        </view>
+      </view>
+      <!-- /右侧内容容器 -->
+    </view>
+  </view>
+  <!-- /商品列表部分 -->
+</view>

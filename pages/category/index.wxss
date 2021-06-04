@@ -21,7 +21,7 @@ page {
 }
 .category_container .category_wrap .left_menu .active {
   color: var(--themeColor);
-  border-left: 4rpx solid currentColor;
+  border-left: 10rpx solid currentColor;
 }
 .category_container .category_wrap .right_content {
   flex: 3;
@@ -35,7 +35,7 @@ page {
 }
 .category_container .category_wrap .right_content .goods_group .goods_title .delimiter {
   color: #cccccc;
-  padding: 0 10rpx;
+  padding: 0 20rpx;
 }
 .category_container .category_wrap .right_content .goods_group .goods_list {
   display: flex;
