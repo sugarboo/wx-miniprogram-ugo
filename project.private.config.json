@@ -1,0 +1,24 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "商品列表",
+          "pathName": "pages/goods_list/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

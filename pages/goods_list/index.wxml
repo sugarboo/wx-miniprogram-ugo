@@ -7,9 +7,10 @@
     <!-- /tab部分 -->
   <!-- 商品列表部分 -->
   <view class="goods_list_section">
-    <view class="good_item"
+    <navigator class="good_item"
       wx:for="{{goodsList}}"
       wx:key="goods_id"
+      url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
     >
       <!-- 左侧图片容器 -->
       <view class="good_image">
@@ -30,7 +31,7 @@
         </view>
       </view>
       <!-- /右侧内容容器 -->
-    </view>
+    </navigator>
   </view>
   <!-- /商品列表部分 -->
 </view>

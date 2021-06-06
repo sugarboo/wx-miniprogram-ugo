@@ -1,1 +1,89 @@
-/* pages/goods_detail/index.wxss */
+page {
+  padding-bottom: 100rpx;
+}
+.goods_detail_container .swiper_section {
+  background-color: #ffffff;
+}
+.goods_detail_container .swiper_section swiper {
+  width: 100%;
+  height: 65vw;
+  text-align: center;
+}
+.goods_detail_container .swiper_section swiper image {
+  width: 60%;
+}
+.goods_detail_container .goods_price {
+  color: var(--themeColor);
+  background-color: #ffffff;
+  font-size: 48rpx;
+  padding-left: 20rpx;
+  margin-top: 20rpx;
+}
+.goods_detail_container .goods_name_section {
+  display: flex;
+  padding: 10rpx 0;
+  background-color: #ffffff;
+  margin-bottom: 20rpx;
+}
+.goods_detail_container .goods_name_section .goods_name {
+  font-size: 30rpx;
+  flex: 5;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.goods_detail_container .goods_name_section .goods_collect {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 2rpx solid var(--themeColor);
+}
+.goods_detail_container .goods_info_section {
+  background-color: #ffffff;
+}
+.goods_detail_container .goods_info_section .goods_info_title {
+  color: var(--themeColor);
+  font-size: 40rpx;
+  font-weight: bold;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.goods_detail_container .tools_section {
+  background-color: #ffffff;
+  position: fixed;
+  height: 100rpx;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+}
+.goods_detail_container .tools_section .tool_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  position: relative;
+}
+.goods_detail_container .tools_section .tool_item button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.goods_detail_container .tools_section .tool_item:nth-last-child(-n+2) {
+  flex: 2;
+  color: #ffffff;
+  font-size: 30rpx;
+  font-weight: bold;
+  background-color: var(--themeColor);
+}
+.goods_detail_container .tools_section .tool_item:last-child {
+  background-color: #eb4450;
+}
