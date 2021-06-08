@@ -60,7 +60,6 @@ Page({
    * 加入购物车
    */
   handleAddInCart () {
-    console.log(this.goodsInfo)
     // 获取缓存中的购物车数组
     let cart = wx.getStorageSync("cart") || []
     // 判断当前商品对象是否存在于购物车数组中

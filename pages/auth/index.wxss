@@ -1,1 +1,8 @@
 /* pages/auth/index.wxss */
+page {
+  background-color: #ffffff;
+}
+
+.auth_container {
+  padding-top: 50%;
+}

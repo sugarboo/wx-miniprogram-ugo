@@ -1,1 +1,90 @@
-/* pages/user/index.wxss */
+page {
+  background-color: #edece8;
+  padding-bottom: 40rpx;
+}
+.user_container .userinfo_section {
+  height: 45%;
+  overflow: hidden;
+  background-color: var(--themeColor);
+  position: relative;
+}
+.user_container .userinfo_section .show_userinfo .userinfo_bg_image {
+  position: relative;
+}
+.user_container .userinfo_section .show_userinfo .userinfo_bg_image .bg_image {
+  height: 50%;
+  filter: blur(10rpx);
+}
+.user_container .userinfo_section .show_userinfo .userinfo_nickname_image {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.user_container .userinfo_section .show_userinfo .userinfo_nickname_image .user_image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.user_container .userinfo_section .show_userinfo .userinfo_nickname_image .user_nickname {
+  color: #fff;
+  margin-top: 40rpx;
+}
+.user_container .menu_section {
+  background-color: #ffffff;
+  display: flex;
+}
+.user_container .menu_section navigator {
+  flex: 1;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.user_container .menu_section navigator .menu_num {
+  color: var(--themeColor);
+}
+.user_container .orders_section {
+  width: 100%;
+  margin-top: 30rpx;
+  background-color: #ffffff;
+  text-align: center;
+}
+.user_container .orders_section .orders_title {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #cccccc;
+}
+.user_container .orders_section .order_content {
+  display: flex;
+}
+.user_container .orders_section .order_content navigator {
+  flex: 1;
+  padding: 15rpx 0;
+  text-align: center;
+  font-size: 30rpx;
+}
+.user_container .orders_section .order_content navigator .iconfont {
+  color: var(--themeColor);
+  font-size: 40rpx;
+}
+.user_container .address_section {
+  margin-top: 30rpx;
+  background-color: #ffffff;
+  padding: 20rpx;
+}
+.user_container .appinfo_section {
+  margin-top: 30rpx;
+  background-color: #ffffff;
+}
+.user_container .appinfo_section .appinfo_item {
+  padding: 20rpx;
+  border-bottom: 1px solid #cccccc;
+}
+.user_container .appinfo_section .appinfo_contact {
+  display: flex;
+  justify-content: space-between;
+}
+.user_container .recommend_section {
+  margin-top: 30rpx;
+  background-color: #ffffff;
+  padding: 20rpx;
+}

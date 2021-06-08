@@ -1,1 +1,17 @@
-/* pages/order/index.wxss */
+page {
+  background-color: #ffffff;
+  color: #333333;
+}
+.order_container .order_section .order_item {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #cccccc;
+}
+.order_container .order_section .order_item .order_item_row {
+  display: flex;
+  justify-content: space-between;
+}
+.order_container .order_section .order_item .order_item_row .order_price_value {
+  color: var(--themeColor);
+  font-size: 32rpx;
+  font-weight: bold;
+}

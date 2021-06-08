@@ -1,2 +1,109 @@
-<!--pages/user/index.wxml-->
-<text>pages/user/index.wxml</text>
+<view class="user_container">
+  <!-- 用户信息部分 -->
+  <view class="userinfo_section">
+    <view class="login_button" wx:if="{{!userInfo.nickName}}">
+      <button type="primary" plain open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">登录</button>
+    </view>
+    <view class="show_userinfo" wx:else>
+      <image class="bg_image" src="{{userInfo.avatarUrl}}"></image>
+      <view class="userinfo_nickname_image">
+        <image class="user_image" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+        <view class="user_nickname">{{userInfo.nickName}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- /用户信息部分 -->
+  <!-- 主要菜单栏部分 -->
+  <view class="main_wrap">
+    <view class="menu_section">
+      <navigator>
+        <view class="menu_num">
+          0
+        </view>
+        <view class="menu_name">
+          收藏店铺
+        </view>
+      </navigator>
+      <navigator>
+        <view class="menu_num">
+          0
+        </view>
+        <view class="menu_name">
+          收藏商品
+        </view>
+      </navigator>
+      <navigator>
+        <view class="menu_num">
+          0
+        </view>
+        <view class="menu_name">
+          关注商品
+        </view>
+      </navigator>
+      <navigator>
+        <view class="menu_num">
+          0
+        </view>
+        <view class="menu_name">
+          我的足迹
+        </view>
+        </navigator>
+      </view>
+      <!-- /主要菜单栏部分 -->
+
+        <!-- 订单部分 -->
+      <view class="orders_section">
+        
+        </view>
+      <!-- /订单部分 -->
+  </view>
+  <!-- 订单部分 -->
+  <view class="orders_section">
+    <view class="orders_title">
+      我的订单
+    </view>
+    <view class="order_content">
+      <navigator url="/pages/order/index?type=1">
+        <view class="iconfont icon-danju"></view>
+        <view class="order_name">全部订单</view>
+      </navigator>
+      <navigator url="/pages/order/index?type=2">
+        <view class="iconfont icon-fukuantongzhi"></view>
+        <view class="order_name">待付款</view>
+      </navigator>
+      <navigator url="/pages/order/index?type=3">
+        <view class="iconfont icon-receipt-address"></view>
+        <view class="order_name">待收货</view>
+      </navigator>
+      <navigator url="/pages/order/index?type=4">
+        <view class="iconfont icon-tuikuan"></view>
+        <view class="order_name">退款/退货</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- /订单部分 -->
+  <!-- 收货地址管理部分 -->
+  <view class="address_section">
+    收货地址管理
+  </view>
+  <!-- /收货地址管理部分 -->
+  <!-- 应用信息相关部分 -->
+  <view class="appinfo_section">
+    <view class="appinfo_item appinfo_contact">
+      <text>联系客服</text>
+      <text>400-618-4000</text>
+    </view>
+    <navigator class="appinfo_item" url="/pages/feedback/index">
+      意见反馈
+    </navigator>
+    <view class="appinfo_item">
+      关于我们
+    </view>
+  </view>
+  <!-- /应用信息相关部分 -->
+  <!-- 应用推荐部分 -->
+  <view class="recommend_section">
+    把应用推荐给其他人
+  </view>
+  <!-- /应用推荐部分 -->
+</view>
