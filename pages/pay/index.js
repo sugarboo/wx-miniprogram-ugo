@@ -15,12 +15,6 @@ Page({
     totalPrice: 0, // 存储购物车中商品总价格, 初始化为0
     totalNum: 0 // 存储购物车中商品总数量, 初始化为0
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  },
   
   /**
    * 生命周期函数--监听页面显示
@@ -90,7 +84,6 @@ Page({
       })
       // 请求成功响应, 从响应数据中获取新创建的订单编号
       const orderNumber = resCreateOrder.data.message.order_number
-      // console.log(orderNumber)
       // 发送请求, 获取支付参数
       const resPay = await request({
         url: "/my/orders/req_unifiedorder",
@@ -124,48 +117,5 @@ Page({
       // 支付失败, 提示用户
       await showToast("支付失败")
     }
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   }
 })

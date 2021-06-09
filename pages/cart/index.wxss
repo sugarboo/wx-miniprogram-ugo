@@ -22,8 +22,8 @@ page {
   background-color: #fbfbfb;
   color: var(--themeColor);
   font-size: 40rpx;
-  font-weight: bold;
   padding: 10rpx 0 10rpx 20rpx;
+  text-align: center;
 }
 .cart_container .cart_section .goods_item {
   display: flex;
@@ -62,7 +62,7 @@ page {
 }
 .cart_container .cart_section .goods_item .goods_info .goods_price_count .goods_price {
   color: var(--themeColor);
-  font-size: 40rpx;
+  font-size: 36rpx;
   font-weight: bold;
 }
 .cart_container .cart_section .goods_item .goods_info .goods_price_count .goods_count {
@@ -122,7 +122,7 @@ page {
   align-items: center;
   background-color: var(--themeColor);
   border-radius: 50rpx;
-  font-size: 40rpx;
+  font-size: 32rpx;
   font-weight: 600;
   color: #ffffff;
 }

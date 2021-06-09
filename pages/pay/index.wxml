@@ -16,6 +16,7 @@
   <view class="cart_section">
     <view class="cart_title">
       <text>购物车</text>
+      <text class="iconfont icon-gou_wu_che2"></text>
     </view>
     <view
       class="goods_item"

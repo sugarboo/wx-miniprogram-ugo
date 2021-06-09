@@ -8,12 +8,15 @@ page {
   background-color: var(--themeColor);
   position: relative;
 }
+.user_container .userinfo_section .login_button {
+  height: inherit;
+}
 .user_container .userinfo_section .show_userinfo .userinfo_bg_image {
   position: relative;
 }
 .user_container .userinfo_section .show_userinfo .userinfo_bg_image .bg_image {
   height: 50%;
-  filter: blur(10rpx);
+  filter: blur(20rpx);
 }
 .user_container .userinfo_section .show_userinfo .userinfo_nickname_image {
   position: absolute;
@@ -78,6 +81,15 @@ page {
 .user_container .appinfo_section .appinfo_item {
   padding: 20rpx;
   border-bottom: 1px solid #cccccc;
+  position: relative;
+}
+.user_container .appinfo_section .appinfo_item button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 .user_container .appinfo_section .appinfo_contact {
   display: flex;
@@ -87,4 +99,13 @@ page {
   margin-top: 30rpx;
   background-color: #ffffff;
   padding: 20rpx;
+  position: relative;
+}
+.user_container .recommend_section button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }

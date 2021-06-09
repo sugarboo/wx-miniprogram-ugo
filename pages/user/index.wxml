@@ -2,7 +2,13 @@
   <!-- 用户信息部分 -->
   <view class="userinfo_section">
     <view class="login_button" wx:if="{{!userInfo.nickName}}">
-      <button type="primary" plain open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">登录</button>
+      <button 
+        type="primary" 
+        open-type="getUserInfo" 
+        bindgetuserinfo="handleGetUserInfo"
+      >
+        登录
+      </button>
     </view>
     <view class="show_userinfo" wx:else>
       <image class="bg_image" src="{{userInfo.avatarUrl}}"></image>
@@ -24,9 +30,9 @@
           收藏店铺
         </view>
       </navigator>
-      <navigator>
+      <navigator url="/pages/collect/index">
         <view class="menu_num">
-          0
+          {{collectionsNum}}
         </view>
         <view class="menu_name">
           收藏商品
@@ -93,9 +99,10 @@
       <text>联系客服</text>
       <text>400-618-4000</text>
     </view>
-    <navigator class="appinfo_item" url="/pages/feedback/index">
+    <view class="appinfo_item">
       意见反馈
-    </navigator>
+      <button open-type="feedback"></button>
+    </view>
     <view class="appinfo_item">
       关于我们
     </view>
@@ -104,6 +111,7 @@
   <!-- 应用推荐部分 -->
   <view class="recommend_section">
     把应用推荐给其他人
+    <button open-type="share"></button>
   </view>
   <!-- /应用推荐部分 -->
 </view>

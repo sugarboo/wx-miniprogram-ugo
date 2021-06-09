@@ -3,9 +3,6 @@
   width: 750rpx;
   height: 340rpx;
 }
-.swiper_section swiper image {
-  width: 100%;
-}
 /* 导航分类部分样式 */
 .category_section {
   display: flex;
@@ -15,9 +12,6 @@
 .category_section navigator {
   flex: 1;
   padding: 20rpx;
-}
-.category_section navigator image {
-  width: 100%;
 }
 /* 楼层部分样式 */
 .floor_section .floor_group .floor_product_list {

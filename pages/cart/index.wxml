@@ -1,7 +1,14 @@
 <view class="cart_container">
   <!-- 添加收货地址部分 -->
   <view class="address_section">
-    <button type="primary" plain bindtap="handleAddAddress" wx:if="{{!address.userName}}">+ 添加收货地址</button>
+    <button 
+      type="primary" 
+      plain 
+      bindtap="handleAddAddress" 
+      wx:if="{{!address.userName}}"
+    >
+      + 添加收货地址
+    </button>
     <view class="show_address" wx:else>
       <view class="name_and_tel">
         <text>收货人:{{address.userName}}</text>
@@ -17,6 +24,7 @@
   <view class="cart_section">
     <view class="cart_title">
       <text>购物车</text>
+      <text class="iconfont icon-gou_wu_che2"></text>
     </view>
     <block wx:if="{{cart.length!==0}}">
       <view
@@ -45,18 +53,18 @@
                 class="count_edit" 
                 bindtap="handleItemCountEdit"
                 data-id="{{item.goods_id}}"
-                data-operation="{{1}}"
+                data-operation="{{-1}}"
               >
-                +
+                -
               </view>
               <view class="show_count">{{item.num}}</view>
               <view 
                 class="count_edit" 
                 bindtap="handleItemCountEdit"
                 data-id="{{item.goods_id}}"
-                data-operation="{{-1}}"
+                data-operation="{{1}}"
               >
-                -
+                +
               </view>
             </view>
           </view>

@@ -1,7 +1,6 @@
 .tab_container .tab_title {
   background-color: #ffffff;
   display: flex;
-  flex-direction: row;
 }
 .tab_container .tab_title .title_item {
   display: flex;

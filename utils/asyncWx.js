@@ -71,11 +71,11 @@ export const showModal = (content) => {
  * Promise封装wx.showToast()
  */
 
-export const showToast = (title) => {
+export const showToast = (title, icon) => {
   return new Promise((resolve, reject) => {
     wx.showToast({
       title,
-      icon: 'error',
+      icon: icon ? icon : "error",
       mask: true,
       success: res => {
         resolve(res)

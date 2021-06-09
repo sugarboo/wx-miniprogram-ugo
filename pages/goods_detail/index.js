@@ -3,6 +3,7 @@
 // 引入request和runtime
 import { request } from "../../utils/request/index.js"
 import regeneratorRuntime from '../../lib/runtime/runtime'
+import { showToast } from "../../utils/asyncWx"
 
 Page({
 
@@ -36,10 +37,17 @@ Page({
       }
     })
     // 请求成功响应, 将响应结果保存在goodsObj中
+    const goodsObj = res.data.message
+    this.goodsInfo = goodsObj
+    // 获取缓存中的商品收藏数组
+    let collections = wx.getStorageSync("collections") || []
+    // 判断当前商品是否被收藏
+    let isCollect = collections.some(v => v.goods_id === this.goodsInfo.goods_id)
+    // 将数据保存在data中
     this.setData({
-      goodsObj: res.data.message
+      goodsObj,
+      isCollect
     })
-    this.goodsInfo = this.data.goodsObj
   },
 
   /**
@@ -81,5 +89,38 @@ Page({
       icon: 'success',
       mask: true,
     })
-  }
+  },
+
+  /**
+   * 点击收藏按钮的监听事件处理
+   */
+   handleCollect () {
+    let isCollect = false
+    //  判断当前商品是否存在于缓存中的collections数组中
+    let collections = wx.getStorageSync("collections") || []
+    const index = collections.findIndex(v => v.goods_id === this.goodsInfo.goods_id)
+    if (index === -1) {
+      // 当前商品不存在collections中, 把商品添加到collections中, 存入缓存
+      collections.push(this.goodsInfo)
+      wx.setStorageSync("collections", collections)
+      // 修改当前商品data中的isCollect并保存
+      isCollect = true
+      this.setData({
+        isCollect
+      })
+      // 调用showToast()提示用户
+      showToast("收藏成功", "success")
+    } else {
+      // 当前商品在collections中已存在, 把该商品从collections中删除, 将修改后的collections存入缓存
+      collections.splice(index, 1)
+      wx.setStorageSync("collections", collections)
+      // 修改当前商品data中的isCollect并保存
+      isCollect = false
+      this.setData({
+        isCollect
+      })
+      // 调用showToast()提示用户
+      showToast("已取消收藏", "success")
+    }
+   }
 })
