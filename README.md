@@ -42,10 +42,10 @@
 [![2fNXQJ.jpg](https://z3.ax1x.com/2021/06/11/2fNXQJ.jpg)](https://imgtu.com/i/2fNXQJ)
 
 #### 2. 商品分类
-[![2ftD4U.gif](https://z3.ax1x.com/2021/06/11/2ftD4U.gif)](https://imgtu.com/i/2ftD4U)
+[![2ftJ3Q.gif](https://z3.ax1x.com/2021/06/11/2ftJ3Q.gif)](https://imgtu.com/i/2ftJ3Q)
 
 #### 3. 商品搜索
-[![2ftJ3Q.gif](https://z3.ax1x.com/2021/06/11/2ftJ3Q.gif)](https://imgtu.com/i/2ftJ3Q)
+[![2ftD4U.gif](https://z3.ax1x.com/2021/06/11/2ftD4U.gif)](https://imgtu.com/i/2ftD4U)
 
 #### 4. 商品列表 
 [![2fNLz4.jpg](https://z3.ax1x.com/2021/06/11/2fNLz4.jpg)](https://imgtu.com/i/2fNLz4)
