@@ -1,4 +1,4 @@
-# miniprogram-ugo
+# wx-miniprogram-ugo
 ## 微信小程序-电商小程序的简单实现
 
 ### 主要功能
